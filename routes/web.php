@@ -3,12 +3,16 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NetworkController;
+use App\Http\Controllers\EdukasiController;
 
 // Route::get('/', function () {
 //     return view('home');
 // });
 
-Route::get('/',[HomeController::class, 'index']);
+Route::get('/',[HomeController::class, 'index'])->name('home');
+Route::get('/network',[NetworkController::class, 'index'])->name('network');
+Route::get('/edukasi',[EdukasiController::class, 'index'])->name('edukasi');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

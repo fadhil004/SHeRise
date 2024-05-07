@@ -44,7 +44,7 @@
                                         <p class="mb-0">Komnas Perempuan mencatat dalam rentang 10 tahun terakhir terdapat lebih dari 2,5 juta kasus kekerasan berbasis gender sudah dilaporkan pada banyak lembaga. Khusus tahun 2023 saja, Catatan Tahunan (Catahu) Komnas Perempuan mencatat 289.111 kasus kekerasan berbasis gender.</p>
                                     </div>
                                     <a href="https://dp3a.kalbarprov.go.id/berita/data-kasus-kekerasan-dalam-10-tahun-terakhir-seluruh-indonesia" class="btn custom-btn mt-2 mt-lg-3">Selengkapnya</a>
-                                </a>
+                                
                             </div>
                         </div>
 
@@ -53,12 +53,13 @@
                                 <div class="d-flex flex-column h-100">
                                     <!-- <img src="/assets/images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt=""> -->
 
-                                    <div class="custom-block-overlay-text d-flex">
+                                    <div class="custom-block-overlay-text">
                                         <div>
                                             <h5 class=" mb-2">Overview</h5>
 
                                             <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident natus exercitationem vitae distinctio, consectetur incidunt praesentium voluptatem tempore! Beatae accusamus amet recusandae illo assumenda qui repellendus sed voluptatum non cum!</p>
                                         </div>
+                                        <a href="#" class="btn custom-btn mt-2 mt-lg-3">Laporkan</a>
                                     </div>
 
                                     <div class="section-overlay"></div>
@@ -198,13 +199,6 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-
-                        <div class="col-12 text-center mt-5">
-                            <p class="">
-                                Want to learn more?
-                                <a href="#" class="btn custom-btn custom-border-btn ms-3">Check out Youtube</a>
-                            </p>
                         </div>
                     </div>
                 </div>

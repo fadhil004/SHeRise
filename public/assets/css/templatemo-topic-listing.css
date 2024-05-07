@@ -12,7 +12,7 @@ https://templatemo.com/tm-590-topic-listing
 :root {
   --white-color:                  #ffffff;
   --primary-color:                #f1b2b2;
-  --secondary-color:              #FFE6E6;
+  --secondary-color:              #f8d6d6;
   --section-bg-color:             #DAEAF1;
   --custom-btn-bg-color:          #f1b2b2;
   --custom-btn-bg-hover-color:    #ec9c9c;
@@ -248,7 +248,7 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #f1b2b2 0%, #FFE6E6 100%);
   padding-top: 150px;
   padding-bottom: 80px;
 }
@@ -485,11 +485,13 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(90deg, #f1b2b2 0%, #FFE6E6 100%);
+  background-image: url('https://tidaklagitabu.id/wp-content/uploads/2023/02/Diverse-group-of-women.jpeg');
   position: relative;
   overflow: hidden;
   padding-top: 150px;
   padding-bottom: 150px;
+  background-size: cover; /* membuat gambar memenuhi seluruh area latar belakang */
+  background-position: center top; /* memastikan gambar tetap di tengah */
 }
 
 .hero-section .input-group {
@@ -524,7 +526,7 @@ strong {
 -----------------------------------------*/
 .featured-section {
   background-image: linear-gradient(90deg, #f1b2b2 0%, #FFE6E6 100%);
-
+  border-radius: 0 0 100px 100px;
   padding-bottom: 100px;
 }
 
