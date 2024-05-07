@@ -12,8 +12,10 @@ return new class extends Migration
             $table->id();
             // Add columns for marketplace items
             $table->string('name');
+            $table->string('category');
             $table->text('description');
-            $table->decimal('price', 8, 2);
+            $table->text('location');
+            $table->integer('price');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

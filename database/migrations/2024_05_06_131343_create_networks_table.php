@@ -10,29 +10,19 @@ return new class extends Migration
     {
         Schema::create('networks', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->text('description');
-            $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-        });
-
-        Schema::create('network_posts', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('network_id');
-            $table->unsignedBigInteger('user_id');
             $table->text('content');
+            $table->string('image');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
-            $table->foreign('network_id')->references('id')->on('networks')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('network_posts');
         Schema::dropIfExists('networks');
     }
 };
