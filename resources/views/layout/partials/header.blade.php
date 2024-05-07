@@ -36,7 +36,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll btn custom-btn" href="index.html#section_5">Pengaduan</a>
+                                <a class="nav-link click-scroll btn custom-btn" href="{{ route('pengaduan') }}">Pengaduan</a>
                             </li>
 
                             <!-- <li class="nav-item dropdown">

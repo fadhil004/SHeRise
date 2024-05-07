@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NetworkController;
 use App\Http\Controllers\EdukasiController;
+use App\Http\Controllers\PengaduanController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -13,6 +14,7 @@ use App\Http\Controllers\EdukasiController;
 Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/network',[NetworkController::class, 'index'])->name('network');
 Route::get('/edukasi',[EdukasiController::class, 'index'])->name('edukasi');
+Route::get('/pengaduan',[PengaduanController::class, 'index'])->name('pengaduan');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

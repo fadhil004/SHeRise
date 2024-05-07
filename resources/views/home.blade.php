@@ -75,7 +75,7 @@
             <section class="explore-section section-padding" id="section_2">
                 <div class="container">
                         <div class="col-12 text-center">
-                            <h2 class="mb-4">Berita Terbaru</h1>
+                            <h2 class="mb-4">Artikel Terbaru</h1>
                         </div>
 
                     </div>
