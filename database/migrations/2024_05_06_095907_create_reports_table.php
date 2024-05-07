@@ -6,15 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::create('job_vacancies', function (Blueprint $table) {
+        Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            // Add columns for job vacancies
-            $table->string('position');
-            $table->text('description');
-            $table->string('location');
-            $table->decimal('salary', 10, 2)->nullable();
+            $table->string('nama_pelapor')->nullable();
+            $table->string('kontak_pelapor')->nullable();
+            $table->text('deskripsi_kejadian');
+            $table->dateTime('tanggal_kejadian')->nullable();
+            $table->string('foto_bukti')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
@@ -22,8 +25,12 @@ return new class extends Migration
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('job_vacancies');
+        Schema::dropIfExists('reports');
     }
 };
+

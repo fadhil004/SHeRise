@@ -8,13 +8,12 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('job_vacancies', function (Blueprint $table) {
+        Schema::create('marketplace_items', function (Blueprint $table) {
             $table->id();
-            // Add columns for job vacancies
-            $table->string('position');
+            // Add columns for marketplace items
+            $table->string('name');
             $table->text('description');
-            $table->string('location');
-            $table->decimal('salary', 10, 2)->nullable();
+            $table->decimal('price', 8, 2);
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
@@ -24,6 +23,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('job_vacancies');
+        Schema::dropIfExists('marketplace_items');
     }
 };
