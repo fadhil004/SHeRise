@@ -122,6 +122,16 @@
                         @endforeach
                         </div>
 
+                        <div class="col-lg-12 col-12 pt-3">
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="pe-5 ps-5 btn custom-btn text-center">
+                                Tampilkan Semua Topik
+                            </a>
+                        </div>
+
+
+                        </div>
+
                     </div>
                 </div>
             </section>

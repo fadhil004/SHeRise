@@ -36,7 +36,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
 
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <!-- <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                             <div class="custom-block bg-white shadow-lg">
                                     <div>
                                         <h5 class="mb-2">Data Kasus Kekerasan</h5>
@@ -46,9 +46,9 @@
                                     <a href="https://dp3a.kalbarprov.go.id/berita/data-kasus-kekerasan-dalam-10-tahun-terakhir-seluruh-indonesia" class="btn custom-btn mt-2 mt-lg-3">Selengkapnya</a>
                                 
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-lg-6 col-12">
+                        <div class="col-lg-10 col-12">
                             <div class="custom-block custom-block-overlay">
                                 <div class="d-flex flex-column h-100">
                                     <!-- <img src="/assets/images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt=""> -->
