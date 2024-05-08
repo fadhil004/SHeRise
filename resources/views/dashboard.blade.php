@@ -73,7 +73,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
+            <a href="{{ route('home')}}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"
@@ -142,7 +142,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+              <a href="#" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -173,6 +173,12 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
             <div class="row">
+            @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
                 <!-- Basic Layout -->
                 <div class="col-xxl">
                   <div class="card mb-4">
@@ -181,7 +187,8 @@
                       <small class="text-muted float-end">Masukkan acara mendatang</small>
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form method="POST" action="{{ route('store-events') }}" enctype="multipart/form-data">
+                      @csrf
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
                           <div class="col-sm-10">
@@ -195,7 +202,7 @@
                             rows="5"
                                 name="description"
                               type="text"
-                              class="form-control"
+                              class="form-control basic-default-description"
                               id="basic-default-description"
                               placeholder="Tulis Deskripsi"
                             ></textarea>
@@ -234,8 +241,8 @@
                           <div class="form-text">Ex : Pekanbaru</div>
                         </div>
                         <div class="mb-3 input-group">
-                        <input name="image" type="file" class="form-control" id="inputGroupFile02" />
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        <input name="image" type="file" class="form-control" id="inputGroupFile01" />
+                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
                       </div>
                         <div class="row justify-content-end">
                           <div class="col-sm-10">
@@ -253,7 +260,8 @@
                       <small class="text-muted float-end">Masukkan topik</small>
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form method="POST" action="{{ route('store-topics') }}" enctype="multipart/form-data">
+                      @csrf
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
                           <div class="col-sm-10">
@@ -267,21 +275,21 @@
                             rows="5"
                                 name="description"
                               type="text"
-                              class="form-control"
+                              class="form-control basic-default-description"
                               id="basic-default-description"
                               placeholder="Tulis Deskripsi"
                             ></textarea>
                           </div>
                         </div>
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="basic-default-content" rows="10">Isi Konten</label>
+                          <label class="col-sm-2 col-form-label" for="basic-default-description" rows="10">Isi Konten</label>
                           <div class="col-sm-10">
                             <textarea
                             rows="5"
                                 name="content"
                               type="text"
-                              class="form-control"
-                              id="basic-default-content"
+                              class="form-control basic-default-description"
+                              id="basic-default-description"
                               placeholder="Tulis Konten"
                             ></textarea>
                           </div>
@@ -310,7 +318,8 @@
                       <small class="text-muted float-end">Masukkan materi atau video</small>
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form method="POST" action="{{ route('store-educations') }}" enctype="multipart/form-data">
+                      @csrf
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
                           <div class="col-sm-10">
@@ -324,7 +333,7 @@
                             rows="5"
                                 name="description"
                               type="text"
-                              class="form-control"
+                              class="form-control basic-default-description"
                               id="basic-default-description"
                               placeholder="Tulis Deskripsi"
                             ></textarea>
@@ -345,8 +354,8 @@
                           </div>
                         </div>
                         <div class="mb-3 input-group">
-                        <input name="image" type="file" class="form-control" id="inputGroupFile02" />
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        <input name="image" type="file" class="form-control" id="inputGroupFile03" />
+                        <label class="input-group-text" for="inputGroupFile03">Upload</label>
                       </div>
                         <div class="row justify-content-end">
                           <div class="col-sm-10">
@@ -364,24 +373,24 @@
                       <small class="text-muted float-end">Masukkan barang</small>
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form form method="POST" action="{{ route('store-items') }}" enctype="multipart/form-data" >
+                      @csrf
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-name">Nama barang</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="basic-default-name" placeholder="Masukkan Nama Barang" name="title" />
+                            <input type="text" class="form-control" id="basic-default-name" placeholder="Masukkan Nama Barang" name="name" />
                           </div>
                         </div>
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-category" rows="5">Category</label>
                           <div class="col-sm-10">
-                            <textarea
-                            rows="5"
+                            <input
                                 name="category"
                               type="text"
                               class="form-control"
                               id="basic-default-category"
                               placeholder="Tulis Category"
-                            ></textarea>
+                            ></input>
                           </div>
                         </div>
                         <div class="row mb-3">
@@ -391,7 +400,7 @@
                             rows="5"
                                 name="description"
                               type="text"
-                              class="form-control"
+                              class="form-control basic-default-description"
                               id="basic-default-description"
                               placeholder="Tulis Deskripsi"
                             ></textarea>
@@ -407,8 +416,6 @@
                                 id="basic-default-price"
                                 class="form-control"
                                 placeholder="Masukkan Harga"
-                                aria-label="john.doe"
-                                aria-describedby="basic-default-email2"
                               />
                             </div>
                           </div>
@@ -418,6 +425,7 @@
                           <div class="col-sm-10">
                             <input
                               type="text"
+                              name="location"
                               id="basic-default-location"
                               class="form-control phone-mask"
                               placeholder="Masukkan Kota/Kabupaten"
@@ -427,8 +435,8 @@
                           </div>
                         </div>
                         <div class="mb-3 input-group">
-                        <input name="image" type="file" class="form-control" id="inputGroupFile02" />
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        <input name="image" type="file" class="form-control" id="inputGroupFile04" />
+                        <label class="input-group-text" for="inputGroupFile04">Upload</label>
                       </div>
                         <div class="row justify-content-end">
                           <div class="col-sm-10">
@@ -481,5 +489,40 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textareas = document.querySelectorAll('.basic-default-description');
+        textareas.forEach(textarea => {
+            textarea.addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    this.value += "<br>";
+                    event.preventDefault();
+                }
+            });
+        });
+    });
+    document.getElementById('basic-default-description').addEventListener('input', function(event) {
+        // Menghapus tag <br> dari nilai textarea
+        this.value = this.value.replace(/<br>/g, "\n");
+    });
+</script> -->
+
+<!-- <script>
+        // Mendapatkan elemen input
+        const nominalInput = document.getElementById('basic-default-price');
+
+        // Tambahkan event listener untuk mengubah format saat input berubah
+        nominalInput.addEventListener('input', function() {
+            // Mengambil nilai input tanpa tanda koma atau titik
+            let nominal = this.value.replace(/\D/g, '');
+            
+            // Memformat nominal dengan menambahkan titik setiap tiga digit
+            nominal = nominal.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+            // Tampilkan kembali nilai yang telah diformat
+            this.value = nominal;
+        });
+    </script> -->
   </body>
 </html>

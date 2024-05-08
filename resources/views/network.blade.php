@@ -28,7 +28,7 @@
                         <div class="col-lg-6 col-md-6 col-12 mt-lg-3">
                             <div class="custom-block custom-block-overlay">
                                 <div class="d-flex flex-column h-100">
-                                    <img src="/assets/images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
+                                    <img src="{{ asset('data/event/'.$topic->image) }}" class="custom-block-image img-fluid" alt="">
 
                                     <div class="custom-block-overlay-text ">
                                         <div class="d-flex flex-column">
@@ -41,7 +41,7 @@
                                                 </div>
                                             </div>
                                             <div class="d-flex">
-                                            <p class="mt-4 mb-0">{{ $topic->description }}</p>
+                                            <p class="mt-4 mb-0">{!! $topic->description !!}</p>
                                             </div>
                                         </div>
                                         
@@ -106,15 +106,15 @@
                         @foreach ($networks as $network)
                             <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
                                 <div class="d-flex">
-                                    <img src="/assets/images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                    <img src="{{ asset('data/topic/'.$network->image)}}" style="width: 400px; object-fit: cover;" alt="">
 
                                     <div class="custom-block-topics-listing-info d-flex">
                                         <div>
                                             <h5 class="mb-2">{{ $network->title}}</h5>
 
-                                            <p class="mb-0">{{ $network->description}}</p>
+                                            <p class="mb-0">{!! $network->description !!}</p>
 
-                                            <a href="topics-detail.html" class="btn custom-btn mt-3 mt-lg-4">Selengkapnya</a>
+                                            <a href="{{route('topic-detail', ['id' => $network->id])}}" class="btn custom-btn mt-3 mt-lg-4">Selengkapnya</a>
                                         </div>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
 
                         <div class="col-lg-12 col-12 pt-3">
                         <div class="d-flex justify-content-center">
-                            <a href="#" class="pe-5 ps-5 btn custom-btn text-center">
+                            <a href="{{ route('network-topic')}}" class="pe-5 ps-5 btn custom-btn text-center">
                                 Tampilkan Semua Topik
                             </a>
                         </div>

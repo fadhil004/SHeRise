@@ -18,10 +18,7 @@ return new class extends Migration
             $table->text('deskripsi_kejadian');
             $table->dateTime('tanggal_kejadian')->nullable();
             $table->string('foto_bukti')->nullable();
-            $table->unsignedBigInteger('user_id');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

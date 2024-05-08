@@ -23,19 +23,19 @@
                 @foreach ($items as $item)
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="card" style="width: 25rem;">
-                        <img src="assets/img/gallery/featured1.png" class="card-img-top" alt="...">
+                        <img src="{{ asset('data/item/'. $item->image)}}" class="card-img-top" alt="...">
                         <div class="card-body">
                         <div class="properties__caption">
                                 <p>{{ $item->category }}s</p>
                                 <h3 class="text-black">{{ $item->name }}</h3>
-                                <p>{{ $item->description }}</p>
+                                <p>{!! $item->description !!}</p>
                                 <div class="properties__footer d-flex justify-content-between align-items-center">
                                     <div class="restaurant-name">
                                         <br>
                                         <p><i class="fa-solid fa-location-dot"></i> {{ $item->location }}</p>
                                     </div>
                                     <div class="price">
-                                        <span>Rp. {{ $item->price }}</span>
+                                        <span>Rp. {{ number_format($item->price, 0, ',', '.') }}</span>
                                     </div>
                                 </div>
                                 <a href="#" class="custom-btn"><span class="text-center">Beli Sekarang</span></a>
@@ -44,6 +44,17 @@
                     </div>
                 </div>
                 @endforeach
+
+                <div class="col-lg-12 col-12 pt-3">
+                        <div class="d-flex justify-content-center">
+                            <a href="{{route('marketplace-form')}}" class="pe-5 ps-5 btn custom-btn text-center">
+                                Jual Produk Kamu
+                            </a>
+                        </div>
+
+
+                        </div>
+
                 <div class="col-lg-12 col-12 pt-3">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center mb-0">

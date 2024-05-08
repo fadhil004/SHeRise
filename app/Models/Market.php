@@ -17,6 +17,7 @@ class Market extends Model
         'description',
         'location',
         'price',
+        'image',
         'user_id'
     ];
 

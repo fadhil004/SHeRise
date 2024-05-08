@@ -29,15 +29,15 @@
                                 <div class="col-md-6">
                                     <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
                                         <div class="d-flex">
-                                    <img src="/assets/images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
+                                    <img src="{{ asset('data/edukasi/'.$topic->image)}}" class="custom-block-image img-fluid" style="width: 260px;" alt="">
 
                                         <div class="custom-block-topics-listing-info d-flex">
                                             <div>
                                             <h5 class="mb-2">{{ $topic->title }}</h5>
 
-                                            <p class="mb-0">{{ $topic->description }}</p>
+                                            <p class="mb-0">{!! $topic->description !!}</p>
 
-                                            <a href="#" class="btn custom-btn mt-3 mt-lg-4">Tonton selengkapnya</a>
+                                            <a href="{{ $topic->link }}" class="btn custom-btn mt-3 mt-lg-4">Pelajari selengkapnya</a>
                                             </div>
                                         </div>
                                         </div>

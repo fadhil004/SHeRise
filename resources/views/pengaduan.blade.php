@@ -55,11 +55,12 @@
                         </div>
 
                         <div class="col-lg-6 col-12">
-                            <form action="#" method="post" class="custom-form contact-form" role="form">
+                            <form action="{{ route('store-reports') }}" method="POST" class="custom-form contact-form"  enctype="multipart/form-data" role="form">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-12 col-12">
                                         <div class="form-floating">
-                                            <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="">
+                                            <input type="text" name="nama_pelapor" id="name" class="form-control" placeholder="Name" required="">
                                             
                                             <label for="floatingInput">Nama</label>
                                         </div>
@@ -67,27 +68,27 @@
 
                                     <div class="col-lg-12 col-12"> 
                                         <div class="form-floating">
-                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+                                            <input type="text" name="kontak_pelapor" id="email" class="form-control" placeholder="" required="">
                                             
                                             <label for="floatingInput">Nomor WhatsApp</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <div class="form-floating">
-                                            <input type="date" name="event_date" id="event_date" class="form-control" required="">
+                                            <input type="date" name="tanggal_kejadian" id="event_date" class="form-control" required="">
                                             <label for="event_date">Tanggal Kejadian</label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-12">
                                         <div class="form-floating">
-                                            <input type="file" name="proof_photo" id="proof_photo" class="form-control custom-file-input">
+                                            <input type="file" name="foto_bukti" id="proof_photo" class="form-control custom-file-input">
                                             <label for="proof_photo">Upload Foto Bukti</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" id="message" name="message" placeholder="Deskripsikan kejadian yang kamu alami"></textarea>
+                                            <textarea rows="5" class="form-control" id="message" name="deskripsi_kejadian" placeholder="Deskripsikan kejadian yang kamu alami"></textarea>
                                             
                                             <label for="floatingTextarea">Deskripsi kejadian</label>
                                         </div>
