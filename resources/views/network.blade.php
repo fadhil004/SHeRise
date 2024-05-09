@@ -18,14 +18,14 @@
 
             <section class="section-padding ">
                 <div class="container">
-                    <div class="row">
+                    <div class="row d-flex justify-content-center">
 
                         <div class="col-lg-12 col-12">
                             <h3 class="mb-4 text-center">Acara Mendatang</h3>
                         </div>
 
                         @foreach ($events as $topic)
-                        <div class="col-lg-6 col-md-6 col-12 mt-lg-3">
+                        <div class="col-lg-10 col-md-12 col-12 mt-lg-3">
                             <div class="custom-block custom-block-overlay">
                                 <div class="d-flex flex-column h-100">
                                     <img src="{{ asset('data/event/'.$topic->image) }}" class="custom-block-image img-fluid" alt="">
@@ -106,10 +106,13 @@
                         @foreach ($networks as $network)
                             <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
                                 <div class="d-flex">
-                                    <img src="{{ asset('data/topic/'.$network->image)}}" style="width: 400px; object-fit: cover;" alt="">
+                                    
+                                    <div class="row custom-block-topics-listing-info d-flex">
+                                     <div clas="col-12 justify-content-center d-flex">
+                                       <img src="{{ asset('data/topic/'.$network->image)}}" class="justify-content-center" style="width: 450px; height: auto; object-fit: cover;"  alt="">
 
-                                    <div class="custom-block-topics-listing-info d-flex">
-                                        <div>
+                                      </div>  
+                                      <div class="col-12">
                                             <h5 class="mb-2">{{ $network->title}}</h5>
 
                                             <p class="mb-0">{!! $network->description !!}</p>

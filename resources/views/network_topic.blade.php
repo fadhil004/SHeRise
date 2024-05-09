@@ -29,10 +29,13 @@
                                 <div class="col-lg-6">
                                     <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
                                         <div class="d-flex">
-                                    <img src="{{ asset('data/topic/'. $topic->image)}}" style="width: 260px; height: 200px; object-fit: cover;" alt="">
+                                    
+                                        <div class="row custom-block-topics-listing-info d-flex">
+                                          <div class="col-12 justify-content-center d-flex">
+                                            <img src="{{ asset('data/topic/'. $topic->image)}}" class="justify-content-center" style="width: 450px; height: auto; object-fit: cover;" alt="">
 
-                                        <div class="custom-block-topics-listing-info d-flex">
-                                            <div>
+                                          </div>
+                                            <div class="col-12">
                                             <h5 class="mb-2">{{ $topic->title }}</h5>
 
                                             <p class="mb-0">{!! ($topic->description) !!}</p>
