@@ -31,9 +31,9 @@
                                         <div>
                                             <h5 class=" mb-2">SHeRise</h5>
 
-                                            <p class="">SHeRise adalah sebuah website tentang pemberdayaan perempuan dan kesetaraan gender. Website ini nantinya akan membantu pengguna untuk bisa mendapatkan semangat hidup kembali dan memberikan cahaya kehidupan untuk mereka. SHeRise juga memiliki banyak fitur lainnya yang berguna untuk meningkatkan kesetaraan gender serta mengedukasi masyarakat terkait dengan fenomena patriaki serta sex education. SHeRise juga memiliki komunitas yang akan membantu korban kekerasan untuk mendapatkan hidup yang lebih baik dan bisa terus bangkit. 
+                                            <p class="">SHeRise adalah sebuah website tentang pemberdayaan perempuan dan kesetaraan gender. Website ini akan membantu pengguna untuk mendapatkan kembali semangat kehidupan untuk mereka. SHeRise memiliki banyak fitur tentang edukasi, laporan kekerasan dll yang sangat bermanfaat serta sebuah komunitas yang akan membantu penggunanya. 
 
-<br>Maka dari itu, jika anda mengalami ataupun menyaksikan kekerasan yang terjadi di lingkungan sekitar anda segera klik tombol 'laporkan' pada website ini</p>
+<br>Jika anda mengalami ataupun menyaksikan kekerasan yang terjadi di lingkungan sekitar anda segera klik tombol 'pengaduan' pada website ini</p>
                                         </div>
                                         <a href="{{route('pengaduan')}}" class="btn custom-btn mt-2 mt-lg-3">Laporkan</a>
                                     </div>
@@ -73,10 +73,11 @@
 
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                        <p>SHeRise merupakan sebuah website yang dipelopori oleh mahasiswa/i Universitas Riau Jurusan Ilmu Komputer. Website ini dibuat berdasarkan banyaknya kasus kekerasan di Indonesia yang kurang penanganan dan berdampak buruk pada korban. Oleh karena itu, kami membangun website ini dengan harapan dapat membantu korban dengan cara memberikan fitur laporan kekerasan yang bisa membantu korban untuk melaporkan kekerasan yang dirasakan, serta fitur-fitur lainnya yang akan membantu korban untuk bangkit kembali.SHeRise adalah sebuah website tentang pemberdayaan perempuan dan kesetaraan gender. Website ini nantinya akan membantu pengguna untuk bisa mendapatkan semangat hidup kembali dan memberikan cahaya kehidupan untuk mereka. SHeRise juga memiliki banyak fitur lainnya yang berguna untuk meningkatkan kesetaraan gender serta mengedukasi masyarakat terkait dengan fenomena patriaki serta sex education. SHeRise juga memiliki komunitas yang akan membantu korban kekerasan untuk mendapatkan hidup yang lebih baik dan bisa terus bangkit. 
+                                        <p>Komnas Perempuan mencatat jumlah kasus kekerasan seksual pada Mei 2022-Desember 2023 mencapai 4.179 kasus. Laporan yang paling banyak diterima adalah Kekerasan Seksual Berbasis Elektronik (KSBE), diikuti oleh pelecehan seksual dan pemerkosaan.
+Kasus KSBE yang diterima Komnas Perempuan mencapai 2.776 kasus. Sementara itu, ada 623 kasus pelecehan seksual dan sisanya adalah kasus pemerkosaan
 
-<br>Maka dari itu, jika anda mengalami ataupun menyaksikan kekerasan yang terjadi di lingkungan sekitar anda segera klik tombol 'laporkan' pada website ini</p>
-                                        </div>
+                                          <br>Oleh karena itu, SHeRise hadir untuk membantu seluruh kalangan masyarakat dalam mengedukasi tentang kekerasan serta budaya patriarki dan kesetaraan gender. SHeRise juga memberikan tempat perlindungan yang aman bagi para korban kekerasan dan korban fenomena lainnya yang berkaitan dengan fitur2 yang kami miliki.</p>
+                   </div>
                                     </div>
                                 </div>
 

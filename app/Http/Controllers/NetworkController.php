@@ -19,7 +19,7 @@ class NetworkController extends Controller
     public function index()
     {
         $data['page_title'] = 'SHeRise - Network';
-        $data['events'] = Event::paginate(2);
+        $data['events'] = Event::paginate(1);
         $data['networks'] = Network::orderBy('created_at', 'desc')->take(3)->get();
         return view('network',$data);
     }
